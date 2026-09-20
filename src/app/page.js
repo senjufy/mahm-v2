@@ -5,6 +5,10 @@ import Pillars from "@/components/Pillars";
 import Story from "@/components/Story";
 import Team from "@/components/Team";
 import Impact from "@/components/Impact";
+import GetInvolved from "@/components/GetInvolved";
+import News from "@/components/News";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -30,11 +34,18 @@ export default function Home() {
         {/* Section: Our Impact (Data-Driven Baseline & Evidence) */}
         <Impact />
 
-        {/* Anchor stub targets for remaining sections */}
-        <div id="get-involved" className="h-16" />
-        <div id="news" className="h-16" />
-        <div id="contact" className="h-16" />
+        {/* Section: Get Involved (Join Us) */}
+        <GetInvolved />
+
+        {/* Section: Latest News & Updates */}
+        <News />
+
+        {/* Section: Contact (Reach Us) */}
+        <Contact />
       </main>
+
+      {/* Global Footer */}
+      <Footer />
     </div>
   );
 }
