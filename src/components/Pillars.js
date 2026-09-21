@@ -70,7 +70,7 @@ export default function Pillars() {
   return (
     <section
       id="pillars"
-      className="relative w-full bg-[#fbf9f2] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 scroll-mt-20 overflow-hidden"
+      className="relative w-full bg-[#fbf9f2] pt-16 sm:pt-20 lg:pt-20 pb-16 sm:pb-20 scroll-mt-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

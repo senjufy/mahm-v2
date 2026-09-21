@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { openDonateModal } from "@/components/DonateModal";
 
 export default function GetInvolved() {
   return (
@@ -50,12 +53,13 @@ export default function GetInvolved() {
                 water filter to a ৳16,247 year of schooling.
               </p>
             </div>
-            <a
-              href="#contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-[#e08a1e] hover:bg-[#c97816] text-white font-bold text-sm px-7 py-2.5 rounded-lg shadow-sm transition-colors"
+            <button
+              type="button"
+              onClick={openDonateModal}
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-[#e08a1e] hover:bg-[#c97816] text-white font-bold text-sm px-7 py-2.5 rounded-lg shadow-sm transition-colors cursor-pointer"
             >
               Donate Now
-            </a>
+            </button>
           </div>
 
           {/* Card 2: Volunteer */}

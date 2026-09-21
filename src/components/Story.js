@@ -9,7 +9,7 @@ export default function Story() {
       {/* Full-Width Panoramic Illustration */}
       <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden">
         <Image
-          src="/Story/story.png"
+          src="/Story/story.jpg"
           alt="Illustration depicting rural community heritage, artisans, and farming in Bangladesh"
           width={2048}
           height={768}

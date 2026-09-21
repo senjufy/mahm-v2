@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { openDonateModal } from "@/components/DonateModal";
 
 const NAV_LINKS = [
   { label: "About Us", href: "#about" },
@@ -42,17 +43,17 @@ export default function Header() {
           {/* Left: Brand Logo */}
           <Link
             href="#top"
-            className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3f5a30] rounded-md transition-opacity hover:opacity-90 py-1"
+            className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3f5a30] rounded-md transition-opacity hover:opacity-90 py-0.5"
             aria-label="MAHM Home"
           >
-            <div className="relative h-14 w-auto flex items-center justify-center">
+            <div className="relative h-16 sm:h-[68px] w-auto flex items-center justify-center">
               <Image
-                src="/logo.png"
+                src="/logo_new.png"
                 alt="MAHM Logo"
-                width={50}
-                height={66}
+                width={63}
+                height={63}
                 priority
-                className="object-contain h-14 w-auto drop-shadow-xs"
+                className="object-contain h-16 sm:h-[65px] w-auto drop-shadow-xs"
               />
             </div>
           </Link>
@@ -75,22 +76,24 @@ export default function Header() {
             </nav>
 
             {/* Desktop CTA Action Button */}
-            <Link
-              href="#get-involved"
-              className="inline-flex items-center justify-center px-6 py-2.5 text-[15px] font-semibold tracking-normal text-white bg-[#e08a1e] hover:bg-[#c97715] active:bg-[#b5670e] rounded-full shadow-xs transition-all duration-150 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e08a1e] focus-visible:ring-offset-2"
+            <button
+              type="button"
+              onClick={openDonateModal}
+              className="inline-flex items-center justify-center px-6 py-2.5 text-[15px] font-semibold tracking-normal text-white bg-[#e08a1e] hover:bg-[#c97715] active:bg-[#b5670e] rounded-full shadow-xs transition-all duration-150 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e08a1e] focus-visible:ring-offset-2 cursor-pointer"
             >
               Donate
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Navigation Trigger */}
           <div className="flex items-center lg:hidden gap-3">
-            <Link
-              href="#get-involved"
-              className="inline-flex items-center justify-center px-4 py-1.5 text-xs font-semibold text-white bg-[#e08a1e] hover:bg-[#c97715] rounded-full shadow-xs"
+            <button
+              type="button"
+              onClick={openDonateModal}
+              className="inline-flex items-center justify-center px-4 py-1.5 text-xs font-semibold text-white bg-[#e08a1e] hover:bg-[#c97715] rounded-full shadow-xs cursor-pointer"
             >
               Donate
-            </Link>
+            </button>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -151,13 +154,16 @@ export default function Header() {
               </Link>
             ))}
             <div className="pt-3 border-t border-[#3f5a30]/10">
-              <Link
-                href="#get-involved"
-                onClick={closeMenu}
-                className="flex items-center justify-center w-full py-2.5 text-base font-semibold text-white bg-[#e08a1e] hover:bg-[#c97715] rounded-full shadow-xs"
+              <button
+                type="button"
+                onClick={() => {
+                  closeMenu();
+                  openDonateModal();
+                }}
+                className="flex items-center justify-center w-full py-2.5 text-base font-semibold text-white bg-[#e08a1e] hover:bg-[#c97715] rounded-full shadow-xs cursor-pointer"
               >
                 Donate
-              </Link>
+              </button>
             </div>
           </div>
         </div>

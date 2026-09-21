@@ -9,6 +9,7 @@ import GetInvolved from "@/components/GetInvolved";
 import News from "@/components/News";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import DonateModal from "@/components/DonateModal";
 
 export default function Home() {
   return (
@@ -46,6 +47,9 @@ export default function Home() {
 
       {/* Global Footer */}
       <Footer />
+
+      {/* Global Donate Modal */}
+      <DonateModal />
     </div>
   );
 }

@@ -64,7 +64,7 @@ export default function Team() {
         {/* Full-width illustration */}
         <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
           <Image
-            src="/Teams/teams.png"
+            src="/Teams/teams.jpg"
             alt="Hand-drawn illustration of teachers, students, engineers, and community workers"
             width={2048}
             height={768}

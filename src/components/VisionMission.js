@@ -29,7 +29,7 @@ export default function VisionMission() {
           <div className="lg:col-span-5 flex flex-col">
             <div className="relative w-full aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md">
               <Image
-                src="/Vision/why_our_work_matters_MAHM_Trust.jpg"
+                src="/Vision/why_our_work_matters_MAHM_Trust1.png"
                 alt="Women leading a community planning session in Muksudpur"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
@@ -37,7 +37,7 @@ export default function VisionMission() {
               />
             </div>
             <p className="mt-3 text-xs sm:text-[13px] text-[#5e6b57] italic leading-snug">
-              Women leading a household planning session the everyday reality behind the strategy.
+              Community-led planning in action: women charting their village's path forward together.
             </p>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function VisionMission() {
       {/* Panoramic Banner Illustration - Stretches full 100vw edge-to-edge */}
       <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-12 sm:mt-16 lg:mt-20 overflow-hidden">
         <Image
-          src="/Vision/Mission_Vission_MAHM_TRUST.png"
+          src="/Vision/Mission_Vission_MAHM_TRUST.jpg"
           alt="Panoramic illustration of community life, education, agriculture, and future growth in Bangladesh"
           width={2560}
           height={864}
