@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "MAHM — Mastery in Servitude",
+  title: "MAHM - Mastery in Servitude",
   description: "Official website of MAHM - Institutionalising community resilience and strengthening human capital.",
 };
 

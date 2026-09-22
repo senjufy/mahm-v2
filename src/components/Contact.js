@@ -6,12 +6,12 @@ const CONTACT_CHANNELS = [
   {
     icon: "📍",
     label: "Address",
-    value: "[ Add office address ]",
+    value: "374 (5th Floor), Tejgaon I/A, Dhaka - 1208",
   },
   {
     icon: "📞",
     label: "Phone",
-    value: "[ Add phone number ]",
+    value: "02-55029739",
   },
   {
     icon: "✉️",
@@ -21,7 +21,7 @@ const CONTACT_CHANNELS = [
   {
     icon: "🕐",
     label: "Office Hours",
-    value: "[ Add hours ]",
+    value: "10am To 5pm",
   },
 ];
 
