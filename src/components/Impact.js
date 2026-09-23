@@ -114,6 +114,11 @@ const STRATEGIC_OBJECTIVES = [
     description:
       "Sustain educational attainment and measurably reduce social precarity and early marriage.",
   },
+  {
+    title: "Climate Resilience",
+    description:
+      "Build climate-resilient communities by promoting nature-based farming, sustainable waste management, waste prevention, and practical green practices including clean energy use.",
+  },
 ];
 
 const PILOT_PROGRAMMES = [
@@ -146,13 +151,13 @@ const PILOT_PROGRAMMES = [
   },
   {
     number: "PILOT 4",
-    title: "[ Add Name & Description ]",
-    objective: null,
-    vulnerability: null,
-    activities: null,
-    isPlaceholder: true,
-    placeholderNote:
-      "Your notes mention a fourth pilot but don't spell out its objective, vulnerability, or activities yet.",
+    title: "Regenerative Agriculture & Plastic Recovery",
+    objective: "Plastic management and regenerative agriculture.",
+    vulnerability:
+      "Soil health degradation, environmental hazard, and waste dumping.",
+    activities:
+      "Farmer awareness and training; plastic usage and waste management.",
+    isPlaceholder: false,
   },
 ];
 
@@ -173,9 +178,14 @@ const KPI_DATA = [
     qualitative: "Improved self-reported physical well-being",
   },
   {
-    category: "Agency",
+    category: "Women Empowerment",
     quantitative: "% increase in women's control of household resources",
     qualitative: "Increase in self-reported autonomy / dignity",
+  },
+  {
+    category: "Agriculture",
+    quantitative: "% increased green/clean practices among the farmers",
+    qualitative: "Improved Soil Health and Produce",
   },
 ];
 
@@ -193,7 +203,7 @@ const PRIORITY_DATA = [
   {
     group: "Climate-Vulnerable",
     justification:
-      "62% of households residing in non-storm-resistant structures.",
+      "62% of households will be severely affected by climate change in next 5-7 years.",
   },
   {
     group: "Medical Distress",
@@ -207,80 +217,18 @@ const PRIORITY_DATA = [
   },
 ];
 
-const RISK_MITIGATION_DATA = [
-  {
-    risk: "Unsafe drinking water",
-    evidence: "88.7% of sources are contaminated despite proximity.",
-    mitigation: "Prioritise arsenic-free deep tubewells / filtration.",
-  },
-  {
-    risk: "Climate shocks",
-    evidence: "62% of housing stock is not storm-resistant.",
-    mitigation: "Transition to climate-resilient semi-permanent housing.",
-  },
-  {
-    risk: "Systemic insolvency",
-    evidence: "Mean debt (৳142k) exceeds median income (৳120k).",
-    mitigation:
-      "Institutionalise savings groups; graduation grants over micro-credit.",
-  },
-  {
-    risk: "Chronic disease burden",
-    evidence: "44% prevalence of heart disease, stroke, or respiratory illness.",
-    mitigation: "Establish community-based health support.",
-  },
-];
-
-const COST_TRAJECTORY_DATA = [
-  {
-    finding: "Water Security Risk",
-    response: "Arsenic-free tubewells / filters",
-    cost: "৳9,370",
-    costType: "One-time",
-  },
-  {
-    finding: "Healthcare Distress",
-    response: "Chronic disease support / clinics",
-    cost: "৳34,739",
-    costType: "Annual / recurrent",
-  },
-  {
-    finding: "Structural Housing Risk",
-    response: "Storm-resistant repairs",
-    cost: "৳65,802",
-    costType: "One-time",
-  },
-  {
-    finding: "Digital Exclusion",
-    response: "IT assets and connectivity",
-    cost: "৳46,169",
-    costType: "One-time",
-  },
-  {
-    finding: "Education Cost Burden",
-    response: "Enrolment / attendance subsidies",
-    cost: "৳16,247",
-    costType: "Annual (per child)",
-  },
-];
-
 export default function Impact() {
   return (
-    <section id="impact" className="relative w-full scroll-mt-20">
+    <section id="impact" className="relative w-full scroll-mt-20 overflow-hidden">
       {/* 1. Main Header Banner (Dark Forest Green) - Only "Our Impact" is the Main Title */}
       <div className="bg-[#3f5a30] text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <span className="text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-[#daba7f] block mb-3">
             The Evidence Behind The Work
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
             Our Impact
           </h2>
-          <p className="text-base sm:text-lg text-[#fbf9f2]/90 leading-relaxed max-w-3xl mx-auto font-normal">
-            Every priority, taka, and programme decision here traces back to one
-            source: a baseline assessment of 150 households across Muksudpur
-            Upazila.
-          </p>
         </div>
       </div>
 
@@ -495,53 +443,6 @@ export default function Impact() {
             </div>
           </div>
 
-          {/* 5. Subsection: Return on Investment */}
-          <div>
-            <div className="max-w-3xl mb-8">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e08a1e] block mb-2">
-                Return On Investment
-              </span>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#3f5a30] mb-3 leading-snug">
-                The Virtuous Cycle
-              </h3>
-              <p className="text-sm sm:text-base text-[#2d3a27] leading-relaxed">
-                A single, one-time investment in water quality directly
-                mitigates the primary driver of medical distress, and the return
-                compounds.
-              </p>
-            </div>
-
-            {/* 3 Virtuous Cycle Metric Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="bg-white rounded-3xl p-6 sm:p-8 text-center border border-[#3f5a30]/10 shadow-xs">
-                <span className="text-3xl sm:text-4xl font-extrabold text-[#3f5a30] block mb-2">
-                  ৳9,370
-                </span>
-                <span className="text-xs sm:text-sm text-[#52604c] leading-snug block">
-                  one-time investment in water quality, per household
-                </span>
-              </div>
-
-              <div className="bg-white rounded-3xl p-6 sm:p-8 text-center border border-[#3f5a30]/10 shadow-xs">
-                <span className="text-3xl sm:text-4xl font-extrabold text-[#e08a1e] block mb-2">
-                  3.7&times;
-                </span>
-                <span className="text-xs sm:text-sm text-[#52604c] leading-snug block">
-                  annual return on that investment
-                </span>
-              </div>
-
-              <div className="bg-white rounded-3xl p-6 sm:p-8 text-center border border-[#3f5a30]/10 shadow-xs">
-                <span className="text-3xl sm:text-4xl font-extrabold text-[#3f5a30] block mb-2">
-                  ৳34,739
-                </span>
-                <span className="text-xs sm:text-sm text-[#52604c] leading-snug block">
-                  in household capital freed from healthcare costs
-                </span>
-              </div>
-            </div>
-          </div>
-
           {/* 6. Subsection: Our Logic Model (How Change Happens) */}
           <div>
             <div className="max-w-3xl mb-8">
@@ -606,15 +507,15 @@ export default function Impact() {
               </h3>
             </div>
 
-            {/* 3 Strategic Objective Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* 4 Strategic Objective Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {STRATEGIC_OBJECTIVES.map((obj) => (
                 <div
                   key={obj.title}
-                  className="bg-white rounded-3xl p-7 sm:p-8 border border-[#3f5a30]/10 border-t-4 border-t-[#3f5a30] shadow-xs flex flex-col justify-between"
+                  className="bg-white rounded-3xl px-7 sm:px-8 py-9 sm:py-10 min-h-[250px] sm:min-h-[280px] border border-[#3f5a30]/10 border-t-4 border-t-[#3f5a30] shadow-xs flex flex-col justify-between"
                 >
                   <div>
-                    <h4 className="text-lg font-bold text-[#1d2619] mb-3">
+                    <h4 className="text-lg font-bold text-[#1d2619] mb-3 sm:mb-4">
                       {obj.title}
                     </h4>
                     <p className="text-xs sm:text-sm text-[#52604c] leading-relaxed">
@@ -697,6 +598,29 @@ export default function Impact() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Spotlight Callout Card: Local-to-Global Coalition */}
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#3f5a30]/10 border-l-4 border-l-[#e08a1e] shadow-xs mt-10">
+              <div className="flex flex-col md:flex-row items-start gap-5 sm:gap-6">
+                <div className="w-12 h-12 shrink-0 rounded-full bg-[#eef2e6] flex items-center justify-center text-2xl">
+                  <span role="img" aria-label="Globe">
+                    🌍
+                  </span>
+                </div>
+
+                <div className="flex-1">
+                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e08a1e] block mb-2">
+                    Local-to-Global Coalition · Under Sustainable Agriculture
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#3f5a30] mb-3 leading-snug">
+                    Chemicals &amp; Waste Management: Tackling Agricultural Plastic Pollution
+                  </h3>
+                  <p className="text-sm sm:text-base text-[#2d3a27] leading-relaxed">
+                    Through our local-to-global coalition on chemicals and waste management, we&apos;re tackling one of agriculture&apos;s most overlooked problems: plastic pollution left in the field. In Bangladesh, we&apos;re building a circular, commercially viable recovery system that brings farmers and the private sector into the same value chain, pairing a targeted, incentivised collection model with an AI-based decision-support tool that adjusts collection logistics and pricing in real time. The result is a verifiable chain running from farmer training all the way to final recycling. On the ground, that means measurably less plastic waste left in the field, an end to open burning, and healthier soil for the next season&apos;s harvest.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -797,121 +721,8 @@ export default function Impact() {
               &ldquo;graduated&rdquo; households creates a ripple effect that
               strengthens community citizenship and collective decision-making.
             </div>
-          </div>
 
-          {/* 11. Subsection: Planning For What Could Go Wrong (Risk & Mitigation) */}
-          <div>
-            <div className="max-w-3xl mb-8">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e08a1e] block mb-2">
-                Planning For What Could Go Wrong
-              </span>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#3f5a30] leading-snug">
-                Risk & Mitigation
-              </h3>
-            </div>
-
-            {/* Risk & Mitigation Table */}
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse min-w-[700px]">
-                <thead>
-                  <tr className="bg-[#3f5a30] text-white">
-                    <th className="py-3.5 px-4 sm:px-6 text-xs font-bold uppercase tracking-wider text-white border-r border-white/20 w-1/4">
-                      Identified Risk
-                    </th>
-                    <th className="py-3.5 px-4 sm:px-6 text-xs font-bold uppercase tracking-wider text-white border-r border-white/20 w-3/8">
-                      Evidence
-                    </th>
-                    <th className="py-3.5 px-4 sm:px-6 text-xs font-bold uppercase tracking-wider text-white w-3/8">
-                      Mitigation Strategy
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {RISK_MITIGATION_DATA.map((row) => (
-                    <tr
-                      key={row.risk}
-                      className="border-b border-[#3f5a30]/15 hover:bg-white/40 transition-colors"
-                    >
-                      <td className="py-4 px-4 sm:px-6 text-sm sm:text-base font-bold text-[#3f5a30]">
-                        {row.risk}
-                      </td>
-                      <td className="py-4 px-4 sm:px-6 text-xs sm:text-sm text-[#2d3748]">
-                        {row.evidence}
-                      </td>
-                      <td className="py-4 px-4 sm:px-6 text-xs sm:text-sm text-[#2d3748]">
-                        {row.mitigation}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          {/* 12. Subsection: Transparency (What It Costs to Change a Trajectory) */}
-          <div>
-            <div className="max-w-3xl mb-8">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e08a1e] block mb-2">
-                Transparency
-              </span>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#3f5a30] leading-snug">
-                What It Costs to Change a Trajectory
-              </h3>
-            </div>
-
-            {/* Cost Breakdown Table */}
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse min-w-[700px]">
-                <thead>
-                  <tr className="bg-[#3f5a30] text-white">
-                    <th className="py-3.5 px-4 sm:px-6 text-xs font-bold uppercase tracking-wider text-white border-r border-white/20 w-1/4">
-                      Assessment Finding
-                    </th>
-                    <th className="py-3.5 px-4 sm:px-6 text-xs font-bold uppercase tracking-wider text-white border-r border-white/20 w-3/8">
-                      Programmatic Response
-                    </th>
-                    <th className="py-3.5 px-4 sm:px-6 text-xs font-bold uppercase tracking-wider text-white border-r border-white/20 w-1/6 text-right">
-                      Mean Cost (BDT)
-                    </th>
-                    <th className="py-3.5 px-4 sm:px-6 text-xs font-bold uppercase tracking-wider text-white w-1/6 text-right">
-                      Cost Type
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {COST_TRAJECTORY_DATA.map((row) => (
-                    <tr
-                      key={row.finding}
-                      className="border-b border-[#3f5a30]/15 hover:bg-white/40 transition-colors"
-                    >
-                      <td className="py-4 px-4 sm:px-6 text-sm sm:text-base font-bold text-[#3f5a30]">
-                        {row.finding}
-                      </td>
-                      <td className="py-4 px-4 sm:px-6 text-xs sm:text-sm text-[#2d3748]">
-                        {row.response}
-                      </td>
-                      <td className="py-4 px-4 sm:px-6 text-xs sm:text-sm font-bold text-[#3f5a30] text-right">
-                        {row.cost}
-                      </td>
-                      <td className="py-4 px-4 sm:px-6 text-right">
-                        <span
-                          className={`inline-block px-2.5 py-1 rounded-full text-xs font-semibold ${
-                            row.costType === "One-time"
-                              ? "bg-[#eef2e6] text-[#3f5a30]"
-                              : "bg-[#fbf9f2] text-[#e08a1e] border border-[#e08a1e]/20"
-                          }`}
-                        >
-                          {row.costType}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            {/* Table Footnote Source */}
-            <p className="text-xs text-[#52604c] mt-4 italic">
+            <p className="text-xs text-[#52604c] mt-6 italic">
               Source: MAHM baseline household assessment, 150 households,
               Muksudpur Upazila (Strategic Program Plan, Version 2).
             </p>

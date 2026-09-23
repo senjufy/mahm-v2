@@ -111,7 +111,7 @@ export default function Pillars() {
         </div>
 
         {/* 4 Documentary Photos Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6 sm:mb-8">
           {PILLARS_DATA.map((pillar) => (
             <div key={pillar.label} className="flex flex-col group">
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xs border border-[#3f5a30]/10 bg-[#eef2e6]">
@@ -128,29 +128,6 @@ export default function Pillars() {
               </span>
             </div>
           ))}
-        </div>
-
-        {/* Spotlight Callout Card: Local-to-Global Coalition */}
-        <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#3f5a30]/10 border-l-4 border-l-[#e08a1e] shadow-xs">
-          <div className="flex flex-col md:flex-row items-start gap-5 sm:gap-6">
-            <div className="w-12 h-12 shrink-0 rounded-full bg-[#eef2e6] flex items-center justify-center text-2xl">
-              <span role="img" aria-label="Globe">
-                🌍
-              </span>
-            </div>
-
-            <div className="flex-1">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e08a1e] block mb-2">
-                Local-to-Global Coalition · Under Sustainable Agriculture
-              </span>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#3f5a30] mb-3 leading-snug">
-                Chemicals &amp; Waste Management: Tackling Agricultural Plastic Pollution
-              </h3>
-              <p className="text-sm sm:text-base text-[#2d3a27] leading-relaxed">
-                Through our local-to-global coalition on chemicals and waste management, we&apos;re tackling one of agriculture&apos;s most overlooked problems: plastic pollution left in the field. In Bangladesh, we&apos;re building a circular, commercially viable recovery system that brings farmers and the private sector into the same value chain, pairing a targeted, incentivised collection model with an AI-based decision-support tool that adjusts collection logistics and pricing in real time. The result is a verifiable chain running from farmer training all the way to final recycling. On the ground, that means measurably less plastic waste left in the field, an end to open burning, and healthier soil for the next season&apos;s harvest.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
 

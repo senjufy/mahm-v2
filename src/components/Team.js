@@ -42,7 +42,7 @@ const TOP_ROW_MEMBERS = [
     id: 3,
     name: "Elisun Ali",
     role: "Deputy Chairperson",
-    image: "/Teams/Elisun_Ali_Deputy_Chairperson.jpeg",
+    image: "/Teams/Elisun.jpeg",
     linkedin: null, // Optional
     hasReadMore: true,
     bio: [
@@ -104,7 +104,7 @@ const BOTTOM_ROW_MEMBERS = [
     id: 9,
     name: "Md. Zakir Hossain",
     role: "Admin",
-    image: "/Teams/Zakir.jpeg",
+    image: "/Teams/Zack.jpeg",
     linkedin: null, // Optional
     hasReadMore: true,
     bio: [
