@@ -16,7 +16,7 @@ const CONTACT_CHANNELS = [
   {
     icon: "✉️",
     label: "Email",
-    value: "[ Add email address ]",
+    value: "info@mahmtrust.org",
   },
   {
     icon: "🕐",

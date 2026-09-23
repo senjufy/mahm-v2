@@ -1,25 +1,13 @@
-import Image from "next/image";
-
 export default function Story() {
   return (
     <section
       id="story"
-      className="relative w-full bg-[#fbf9f2] pt-8 sm:pt-12 pb-16 sm:pb-24 scroll-mt-20 overflow-hidden"
+      className="relative w-full bg-[#fbf9f2] pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 scroll-mt-20 overflow-hidden"
     >
-      {/* Full-Width Panoramic Illustration */}
-      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden">
-        <Image
-          src="/Story/story.jpg"
-          alt="Illustration depicting rural community heritage, artisans, and farming in Bangladesh"
-          width={2048}
-          height={768}
-          sizes="100vw"
-          className="w-full h-auto block"
-        />
-      </div>
+      <span id="about" className="absolute -top-20" aria-hidden="true" />
 
       {/* Main Narrative & Ethos Block */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16 lg:mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Left Column: Story Content */}
           <div className="lg:col-span-7 flex flex-col justify-center">

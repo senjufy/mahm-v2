@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const RISK_MATRIX_DATA = [
   {
     sector: "Water Security",
@@ -371,6 +373,18 @@ export default function Impact() {
                 survive.
               </p>
             </div>
+          </div>
+
+          {/* Panoramic Banner Illustration */}
+          <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden">
+            <Image
+              src="/Impact/impact.jpg"
+              alt="Panoramic illustration of rural community life and farming in Bangladesh"
+              width={2560}
+              height={864}
+              sizes="100vw"
+              className="w-full h-auto block"
+            />
           </div>
 
           {/* 4. Subsection: Compound Vulnerability */}

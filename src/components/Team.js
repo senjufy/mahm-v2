@@ -14,116 +14,136 @@ import TeamModal from "@/components/TeamModal";
  * - hasReadMore: boolean
  * - bio: string[] (Array of biographical paragraphs)
  */
-const TOP_ROW_MEMBERS = [
+const TEAM_SECTIONS = [
   {
-    id: 1,
-    name: "Ali Azam",
-    role: "Founder",
-    image: "/Teams/Ali_Azam_Founder_MAHM_TRUST.jpeg",
-    linkedin: null, // Optional
-    hasReadMore: true,
-    bio: [
-      "A visionary engineer, entrepreneur, and Freedom Fighter, Ali Azam established the Moulovi Abdul Hye Memorial Trust (MAHM Trust) inspired by the educational legacy of his father, Moulovi Abdul Hye, a revered headmaster in Gobindopur. Ali Azam dedicated himself to ensuring that poverty would never deprive a child of education or hold back his community. Beyond founding the Moulovi Abdul Hye Memorial School & College, his vision spearheaded impactful social initiatives including successfully preventing early marriages for nearly 200+ young girls and providing them with employment opportunities to secure their long-term independence and dignity.",
+    id: "leadership",
+    title: "Trust Leadership",
+    members: [
+      {
+        id: 1,
+        name: "Ali Azam",
+        role: "Founder",
+        image: "/Teams/Ali_Azam_Founder_MAHM_TRUST.jpeg",
+        linkedin: null, // Optional
+        hasReadMore: true,
+        bio: [
+          "A visionary engineer, entrepreneur, and Freedom Fighter, Ali Azam established the Moulovi Abdul Hye Memorial Trust (MAHM Trust) inspired by the educational legacy of his father, Moulovi Abdul Hye, a revered headmaster in Gobindopur. Ali Azam dedicated himself to ensuring that poverty would never deprive a child of education or hold back his community. Beyond founding the Moulovi Abdul Hye Memorial School & College, his vision spearheaded impactful social initiatives including successfully preventing early marriages for nearly 200+ young girls and providing them with employment opportunities to secure their long-term independence and dignity.",
+        ],
+      },
+      {
+        id: 2,
+        name: "Tarana Ali",
+        role: "Chairperson",
+        image: "/Teams/Tarana.jpeg",
+        linkedin: null, // Optional
+        hasReadMore: true,
+        bio: [
+          "Tarana Ali chairs MAHM TRUST, guiding its work across education, sustainable agriculture, the circular economy, and women's rights and livelihood. She also serves as Managing Director of Adex Group of Companies, a leading Bangladesh-based power engineering group, where she co-leads strategy, governance, and organizational development across its manufacturing and engineering enterprises.",
+          "Her leadership bridges MAHM's grassroots community work with the operational discipline of running a large Group of Companies, bringing the same focus on structure, accountability, and long-term resilience to both.",
+        ],
+      },
+      {
+        id: 3,
+        name: "Elisun Ali",
+        role: "Deputy Chairperson",
+        image: "/Teams/Elisun.jpeg",
+        linkedin: null, // Optional
+        hasReadMore: true,
+        bio: [
+          "Elisun Ali brings over 15 years of power sector expertise to her role as Deputy Chairperson of MAHM Trust. She serves as the Director of Research & Development at Adex Group of Companies, leading product design, innovation, and business management with a strong focus on energy efficiency and environmental sustainability. She also chairs the BSTI Transformer Sector Committee, helping shape national standards and policy frameworks for the power industry.",
+          "Alongside her corporate leadership, Elisun actively drives MAHM Trust's community initiatives across rural economic development, sustainable agriculture, youth engagement, and women's rights. A vocalist with over 11 years of performance experience, she leverages her creative background to promote local culture, music, art, and women's sports. Her work uniquely bridges technological innovation, sustainability, and grassroots community empowerment.",
+        ],
+      },
     ],
   },
   {
-    id: 2,
-    name: "Tarana Ali",
-    role: "Chairperson",
-    image: "/Teams/Tarana.jpeg",
-    linkedin: null, // Optional
-    hasReadMore: true,
-    bio: [
-      "Tarana Ali chairs MAHM TRUST, guiding its work across education, sustainable agriculture, the circular economy, and women’s rights and livelihood. She also serves as Managing Director of Adex Group of Companies, a leading Bangladesh-based power engineering group, where she co-leads strategy, governance, and organizational development across its manufacturing and engineering enterprises.",
-      "Her leadership bridges MAHM’s grassroots community work with the operational discipline of running a large Group of Companies, bringing the same focus on structure, accountability, and long-term resilience to both.",
+    id: "advisory",
+    title: "Strategic Advisers",
+    members: [
+      {
+        id: 5,
+        name: "Palash Das",
+        role: "Senior Adviser",
+        image: "/Teams/Polash_Das_Senior_Adviser_MAHM_TRUST.jpeg",
+        linkedin: null, // Optional
+        hasReadMore: true,
+        bio: [
+          "Senior development professional with over 25 years' experience in climate resilience, inclusive growth, and impact-oriented finance. Has structured climate financing solutions for circular economy interventions, including urban waste management and regenerative agriculture initiatives, and has led climate risk assessments and ESG advisory engagements across regions. Brings practical experience in results-based management, digital reporting systems, and economic policy analysis.",
+        ],
+      },
+      {
+        id: 8,
+        name: "Tamanna Khan",
+        role: "Adviser",
+        image: "/Teams/Tamanna_Khan_Adviser_MAHM_TRUST.jpeg",
+        linkedin: null, // Optional
+        hasReadMore: true,
+        bio: [
+          "Tamanna Khan is a journalist who believes secular education is the key to building a knowledge-based, empathetic, and inclusive society. Born and raised in Dhaka, she had the privilege of an education that instilled progressive values, giving her the confidence to pursue an unconventional path in a heavily patriarchal society. Tamanna graduated with a degree in Business Administration from North South University and later completed her MBA at Dhaka University. She brings diverse local and international experience spanning market research, banking, teaching, communications, and customer service. Ultimately, the legacy she wishes to leave behind is rooted in educational philanthropy.",
+        ],
+      },
     ],
   },
   {
-    id: 3,
-    name: "Elisun Ali",
-    role: "Deputy Chairperson",
-    image: "/Teams/Elisun.jpeg",
-    linkedin: null, // Optional
-    hasReadMore: true,
-    bio: [
-      "Elisun Ali brings over 15 years of power sector expertise to her role as Deputy Chairperson of MAHM Trust. She serves as the Director of Research & Development at Adex Group of Companies, leading product design, innovation, and business management with a strong focus on energy efficiency and environmental sustainability. She also chairs the BSTI Transformer Sector Committee, helping shape national standards and policy frameworks for the power industry.",
-      "Alongside her corporate leadership, Elisun actively drives MAHM Trust’s community initiatives across rural economic development, sustainable agriculture, youth engagement, and women’s rights. A vocalist with over 11 years of performance experience, she leverages her creative background to promote local culture, music, art, and women’s sports. Her work uniquely bridges technological innovation, sustainability, and grassroots community empowerment.",
+    id: "programmes",
+    title: "Executive & Programme Leadership",
+    members: [
+      {
+        id: 4,
+        name: "Lucky Mony",
+        role: "Executive Director",
+        image: "/Teams/Moni.jpeg",
+        linkedin: null, // Optional
+        hasReadMore: true,
+        bio: [
+          "Lucky Mony is a business and social-impact professional with extensive experience in the energy sector and as a Director at Adex Group of Companies. As Executive Director of the Moulovi Abdul Hye Memorial Trust, she leads initiatives at the intersection of education, psychology, art, creativity, and community development, with a focus on creating meaningful social change.",
+          "Her work also spans media and post-production, while her current social-tech venture explores innovative approaches to community building and wellbeing. She brings a cross-disciplinary perspective that connects business, creative thinking, and human development to the Trust's long-term vision.",
+        ],
+      },
+      {
+        id: 7,
+        name: "Shaheen Bin Siraz",
+        role: "Head of Programme",
+        image: "/Teams/Shaheen.jpeg",
+        linkedin: null, // Optional
+        hasReadMore: true,
+        bio: [
+          "Development professional with 25 years of experience in programme delivery, partner management and donor oversight in Bangladesh. Managed climate resilience work at Christian Aid, implemented community flood resilience programming at Oxfam GB, and supervised close to 180 staff delivering community-managed water, sanitation and hygiene programmes at NGO Forum for Public Health. At USAID Bangladesh, led project and activity design across environment, climate, governance, economic growth and other sectors, alongside grant performance and compliance responsibilities. Current advisory work covers environmental and social risk screening, project design and results-based management.",
+          "Brings experience relevant to managing the proposed agricultural plastics recovery project: coordinating community programmes and private-sector relationships, overseeing budgets and partner grants, supporting inclusive participation, and using performance evidence to guide implementation. Established a USAID-BRAC Bank credit guarantee programme that expanded smallholder farmers' access to formal finance.",
+        ],
+      },
     ],
   },
   {
-    id: 4,
-    name: "Lucky Mony",
-    role: "Executive Director",
-    image: "/Teams/Moni.jpeg",
-    linkedin: null, // Optional
-    hasReadMore: true,
-    bio: [
-      "Lucky Mony is a business and social-impact professional with extensive experience in the energy sector and as a Director at Adex Group of Companies. As Executive Director of the Moulovi Abdul Hye Memorial Trust, she leads initiatives at the intersection of education, psychology, art, creativity, and community development, with a focus on creating meaningful social change.",
-      "Her work also spans media and post-production, while her current social-tech venture explores innovative approaches to community building and wellbeing. She brings a cross-disciplinary perspective that connects business, creative thinking, and human development to the Trust’s long-term vision.",
+    id: "operations",
+    title: "Operations & Impact",
+    members: [
+      {
+        id: 9,
+        name: "Md. Zakir Hossain",
+        role: "Admin",
+        image: "/Teams/Zack.jpeg",
+        linkedin: null, // Optional
+        hasReadMore: true,
+        bio: [
+          "MD. Zakir Hossain serves as the Admin of Moulovi Abdul Hye Memorial Trust (MAHM Trust) and the Head of Institution at Moulovi Abdul Hye Memorial School and College, Muksudpur, Gopalganj. In his dual capacity, he leads operational management, maintains organizational discipline, and oversees the execution of the trust's welfare initiatives on the ground. At the institutional level, MD. Zakir Hossain is dedicated to cultivating a positive learning environment focused on academic excellence, moral values, and leadership. Under his leadership, the school actively runs community awareness campaigns on key social issues, including education, environmental protection, sanitation, road safety, child rights, and substance abuse prevention. During floods and natural disasters, he coordinates relief efforts, encouraging students and community members to extend mutual support.",
+          "He strongly believes that the true metric of an institution's success extends beyond academic grades to the character of the individuals it nurtures. Through structured administration, social responsibility, and active community engagement, MD. Zakir Hossain continues to advance the core mission of MAHM Trust.",
+        ],
+      },
+      {
+        id: 10,
+        name: "Ajufa Akhter",
+        role: "M&E Lead",
+        image: "/Teams/ajufa.jpeg",
+        linkedin: null, // Optional
+        hasReadMore: true,
+        bio: [
+          "Ajufa Akhter serves as the Monitoring & Evaluation (M&E) Lead at MAHM Trust, bringing over a decade of experience across strategic communications, digital marketing, and community-driven initiatives. In her role as Assistant Manager at Adex Group, she leads brand positioning, website development, and executive communications.",
+          "A passionate practitioner of experiential learning and child development, Ajufa is the founder of Anandalok (a creative learning initiative for children) and an author of published children's literature. She communicates in Bengali and English, with basic conversational skills in French and German.",
+        ],
+      },
     ],
   },
-  {
-    id: 5,
-    name: "Palash Das",
-    role: "Senior Adviser",
-    image: "/Teams/Polash_Das_Senior_Adviser_MAHM_TRUST.jpeg",
-    linkedin: null, // Optional, present
-    hasReadMore: true,
-    bio: [
-      "Senior development professional with over 25 years’ experience in climate resilience, inclusive growth, and impact-oriented finance. Has structured climate financing solutions for circular economy interventions, including urban waste management and regenerative agriculture initiatives, and has led climate risk assessments and ESG advisory engagements across regions. Brings practical experience in results-based management, digital reporting systems, and economic policy analysis."
-    ],
-  },
-
-];
-
-const BOTTOM_ROW_MEMBERS = [
-  {
-    id: 7,
-    name: "Shaheen Bin Siraz",
-    role: "Head of Programme and Adviser ",
-    image: "/Teams/Shaheen.jpeg",
-    linkedin: null, // Optional, present
-    hasReadMore: true,
-    bio: [
-      "Development professional with 25 years of experience in programme delivery, partner management and donor oversight in Bangladesh. Managed climate resilience work at Christian Aid, implemented community flood resilience programming at Oxfam GB, and supervised close to 180 staff delivering community-managed water, sanitation and hygiene programmes at NGO Forum for Public Health. At USAID Bangladesh, led project and activity design across environment, climate, governance, economic growth and other sectors, alongside grant performance and compliance responsibilities. Current advisory work covers environmental and social risk screening, project design and results-based management.",
-      "Brings experience relevant to managing the proposed agricultural plastics recovery project: coordinating community programmes and private-sector relationships, overseeing budgets and partner grants, supporting inclusive participation, and using performance evidence to guide implementation. Established a USAID–BRAC Bank credit guarantee programme that expanded smallholder farmers’ access to formal finance.",
-    ],
-  },
-  {
-    id: 8,
-    name: "Tamanna Khan",
-    role: "Adviser",
-    image: "/Teams/Tamanna_Khan_Adviser_MAHM_TRUST.jpeg",
-    linkedin: null, // Optional
-    hasReadMore: true,
-    bio: [
-      "Tamanna Khan is a journalist who believes secular education is the key to building a knowledge-based, empathetic, and inclusive society. Born and raised in Dhaka, she had the privilege of an education that instilled progressive values, giving her the confidence to pursue an unconventional path in a heavily patriarchal society. Tamanna graduated with a degree in Business Administration from North South University and later completed her MBA at Dhaka University. She brings diverse local and international experience spanning market research, banking, teaching, communications, and customer service. Ultimately, the legacy she wishes to leave behind is rooted in educational philanthropy."
-    ],
-  },
-  {
-    id: 9,
-    name: "Md. Zakir Hossain",
-    role: "Admin",
-    image: "/Teams/Zack.jpeg",
-    linkedin: null, // Optional
-    hasReadMore: true,
-    bio: [
-      "30+ Years of experience",
-      "Helps oversee school",
-    ],
-  },
-  {
-    id: 10,
-    name: "Ajufa Akhter",
-    role: "M&E Lead",
-    image: "/Teams/ajufa.jpeg",
-    linkedin: null, // Optional
-    hasReadMore: true,
-    bio: [
-      "Ajufa Akhter serves as the Monitoring & Evaluation (M&E) Lead at MAHM Trust, bringing over a decade of experience across strategic communications, digital marketing, and community-driven initiatives. In her role as Assistant Manager at Adex Group, she leads brand positioning, website development, and executive communications.",
-      "A passionate practitioner of experiential learning and child development, Ajufa is the founder of Anandalok (a creative learning initiative for children) and an author of published children's literature. She communicates in Bengali and English, with basic conversational skills in French and German.",
-    ],
-  }
 ];
 
 function TeamMemberCard({ member, onSelect }) {
@@ -199,6 +219,8 @@ function TeamMemberCard({ member, onSelect }) {
 export default function Team() {
   const [selectedMember, setSelectedMember] = useState(null);
 
+  const [leadership, advisory, programmes, operations] = TEAM_SECTIONS;
+
   return (
     <section
       id="team"
@@ -227,32 +249,116 @@ export default function Team() {
         </div>
       </div>
 
-      {/* Team Member Slots Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-2.5 sm:mt-3.5 lg:mt-4">
-        {/* Top Row: 5 Members */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-8 gap-x-4 sm:gap-x-6 lg:gap-x-7 mb-10 sm:mb-14 lg:mb-16">
-          {TOP_ROW_MEMBERS.map((member) => (
-            <TeamMemberCard
-              key={member.id}
-              member={member}
-              onSelect={setSelectedMember}
-            />
-          ))}
+      {/* Team Member Sections Container */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 sm:mt-8 lg:mt-10">
+        {/* Tier 1: Trust Leadership (3 members) */}
+        <div>
+          <div className="flex items-center justify-center mb-6 sm:mb-8">
+            <div className="h-px bg-[#3f5a30]/15 flex-1 max-w-[60px] sm:max-w-[120px]" />
+            <h3 className="mx-3 sm:mx-4 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#3f5a30] bg-[#eef2e6] px-4 py-1.5 rounded-full border border-[#3f5a30]/15 shadow-2xs">
+              {leadership.title}
+            </h3>
+            <div className="h-px bg-[#3f5a30]/15 flex-1 max-w-[60px] sm:max-w-[120px]" />
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-y-8 gap-x-4 sm:gap-x-6 lg:gap-x-8">
+            {leadership.members.map((member) => (
+              <div
+                key={member.id}
+                className="w-[calc(50%-0.6rem)] sm:w-[calc(33.333%-1rem)] lg:w-[220px] xl:w-[230px] max-w-[240px]"
+              >
+                <TeamMemberCard
+                  member={member}
+                  onSelect={setSelectedMember}
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Bottom Row: Centered */}
-        <div className="flex flex-wrap justify-center gap-y-8 gap-x-4 sm:gap-x-6 lg:gap-x-7">
-          {BOTTOM_ROW_MEMBERS.map((member) => (
-            <div
-              key={member.id}
-              className="w-[calc(50%-0.6rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.4rem)] max-w-[240px]"
-            >
-              <TeamMemberCard
-                member={member}
-                onSelect={setSelectedMember}
-              />
+        {/* Tier 2: Same Row - Strategic Advisers & Executive / Programme Leadership with dividing line */}
+        <div className="mt-12 sm:mt-16 lg:mt-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 lg:divide-x lg:divide-[#3f5a30]/15">
+            {/* Left: Strategic Advisers */}
+            <div className="lg:pr-8 xl:pr-12 flex flex-col items-center">
+              <div className="flex items-center justify-center w-full mb-6 sm:mb-8">
+                <div className="h-px bg-[#3f5a30]/15 flex-1 max-w-[40px] sm:max-w-[80px]" />
+                <h3 className="mx-3 sm:mx-4 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#3f5a30] bg-[#eef2e6] px-4 py-1.5 rounded-full border border-[#3f5a30]/15 shadow-2xs whitespace-nowrap">
+                  {advisory.title}
+                </h3>
+                <div className="h-px bg-[#3f5a30]/15 flex-1 max-w-[40px] sm:max-w-[80px]" />
+              </div>
+
+              <div className="flex flex-wrap justify-center gap-y-8 gap-x-4 sm:gap-x-6 w-full">
+                {advisory.members.map((member) => (
+                  <div
+                    key={member.id}
+                    className="w-[calc(50%-0.6rem)] sm:w-[200px] lg:w-[210px] xl:w-[220px] max-w-[230px]"
+                  >
+                    <TeamMemberCard
+                      member={member}
+                      onSelect={setSelectedMember}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+
+            {/* Mobile Separator Line */}
+            <div className="lg:hidden flex items-center justify-center -my-2">
+              <div className="w-36 h-px bg-[#3f5a30]/15" />
+            </div>
+
+            {/* Right: Executive & Programme Leadership */}
+            <div className="lg:pl-8 xl:pl-12 flex flex-col items-center">
+              <div className="flex items-center justify-center w-full mb-6 sm:mb-8">
+                <div className="h-px bg-[#3f5a30]/15 flex-1 max-w-[40px] sm:max-w-[80px]" />
+                <h3 className="mx-3 sm:mx-4 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#3f5a30] bg-[#eef2e6] px-4 py-1.5 rounded-full border border-[#3f5a30]/15 shadow-2xs whitespace-nowrap">
+                  {programmes.title}
+                </h3>
+                <div className="h-px bg-[#3f5a30]/15 flex-1 max-w-[40px] sm:max-w-[80px]" />
+              </div>
+
+              <div className="flex flex-wrap justify-center gap-y-8 gap-x-4 sm:gap-x-6 w-full">
+                {programmes.members.map((member) => (
+                  <div
+                    key={member.id}
+                    className="w-[calc(50%-0.6rem)] sm:w-[200px] lg:w-[210px] xl:w-[220px] max-w-[230px]"
+                  >
+                    <TeamMemberCard
+                      member={member}
+                      onSelect={setSelectedMember}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Tier 3: Operations & Impact (2 members) */}
+        <div className="mt-12 sm:mt-16 lg:mt-20">
+          <div className="flex items-center justify-center mb-6 sm:mb-8">
+            <div className="h-px bg-[#3f5a30]/15 flex-1 max-w-[60px] sm:max-w-[120px]" />
+            <h3 className="mx-3 sm:mx-4 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#3f5a30] bg-[#eef2e6] px-4 py-1.5 rounded-full border border-[#3f5a30]/15 shadow-2xs">
+              {operations.title}
+            </h3>
+            <div className="h-px bg-[#3f5a30]/15 flex-1 max-w-[60px] sm:max-w-[120px]" />
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-y-8 gap-x-4 sm:gap-x-6 lg:gap-x-8">
+            {operations.members.map((member) => (
+              <div
+                key={member.id}
+                className="w-[calc(50%-0.6rem)] sm:w-[210px] lg:w-[220px] xl:w-[230px] max-w-[240px]"
+              >
+                <TeamMemberCard
+                  member={member}
+                  onSelect={setSelectedMember}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

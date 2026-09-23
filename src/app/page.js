@@ -20,14 +20,14 @@ export default function Home() {
         {/* Full-bleed Photographic Hero Carousel */}
         <Hero />
 
+        {/* Section: Our Story (Where It Began) */}
+        <Story />
+
         {/* Section: Who We Are (Vision & Mission) */}
         <VisionMission />
 
         {/* Section: Our Four Pillars (What We Do) */}
         <Pillars />
-
-        {/* Section: Our Story (Where It Began) */}
-        <Story />
 
         {/* Section: Our Team */}
         <Team />
@@ -39,7 +39,7 @@ export default function Home() {
         <GetInvolved />
 
         {/* Section: Latest News & Updates */}
-        <News />
+        {/* <News />*/}
 
         {/* Section: Contact (Reach Us) */}
         <Contact />
