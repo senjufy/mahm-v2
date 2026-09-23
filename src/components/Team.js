@@ -30,7 +30,7 @@ const TOP_ROW_MEMBERS = [
     id: 2,
     name: "Tarana Ali",
     role: "Chairperson",
-    image: "/Teams/Tarana.png",
+    image: "/Teams/Tarana.jpeg",
     linkedin: null, // Optional
     hasReadMore: true,
     bio: [
