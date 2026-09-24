@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Footer() {
   return (
     <footer className="w-full bg-[#1e2e17] text-white py-12 sm:py-14 border-t border-[#3f5a30]/30">
@@ -7,11 +5,13 @@ export default function Footer() {
         {/* Logo */}
         <div className="mb-4">
           <div className="bg-white/95 rounded-xl p-2 sm:p-2.5 shadow-xs inline-block">
-            <Image
+            <img
               src="/logo_new.png"
               alt="MAHM Logo"
               width={64}
               height={64}
+              loading="lazy"
+              decoding="async"
               className="h-12 sm:h-14 w-auto object-contain"
             />
           </div>

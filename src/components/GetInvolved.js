@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { openDonateModal } from "@/components/DonateModal";
 
 export default function GetInvolved() {
@@ -13,13 +12,12 @@ export default function GetInvolved() {
         {/* Header with Circular Image */}
         <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 mb-12 sm:mb-16 text-center sm:text-left">
           <div className="relative w-28 h-28 sm:w-36 sm:h-36 shrink-0 rounded-full overflow-hidden border-4 border-white shadow-md bg-[#eef2e6]">
-            <Image
+            <img
               src="/Join/Get_Involved.jpeg"
               alt="Youth participating in community sports and activities"
-              fill
-              sizes="(max-width: 640px) 112px, 144px"
-              className="object-cover object-top"
-              priority
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover object-top"
             />
           </div>
 

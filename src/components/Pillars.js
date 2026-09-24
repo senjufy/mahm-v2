@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const PILLARS_DATA = [
   {
     icon: "🌱",
@@ -115,12 +113,12 @@ export default function Pillars() {
           {PILLARS_DATA.map((pillar) => (
             <div key={pillar.label} className="flex flex-col group">
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xs border border-[#3f5a30]/10 bg-[#eef2e6]">
-                <Image
+                <img
                   src={pillar.image}
                   alt={pillar.imageAlt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <span className="mt-3 text-xs sm:text-[13px] font-medium text-[#52604c] text-center">
@@ -133,12 +131,13 @@ export default function Pillars() {
 
       {/* Panoramic Banner Illustration - Mulching Film in Agriculture (sit ABOVE Our Principles section, 100vw edge-to-edge) */}
       <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] my-12 sm:my-16 lg:my-20 overflow-hidden">
-        <Image
+        <img
           src="/Pillars/Mulching_Film_in_Agro.png"
           alt="Agricultural plastic mulching film and solar irrigation in rural Bangladesh"
           width={2560}
           height={864}
-          sizes="100vw"
+          loading="lazy"
+          decoding="async"
           className="w-full h-auto block"
         />
       </div>

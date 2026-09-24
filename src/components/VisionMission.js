@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function VisionMission() {
   return (
     <section
@@ -30,12 +28,13 @@ export default function VisionMission() {
 
       {/* Panoramic Banner Illustration - Stretches full 100vw edge-to-edge */}
       <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-12 sm:mt-16 lg:mt-20 overflow-hidden">
-        <Image
+        <img
           src="/Vision/Mission_Vission_MAHM_TRUST.jpg"
           alt="Panoramic illustration of community life, education, agriculture, and future growth in Bangladesh"
           width={2560}
           height={864}
-          sizes="100vw"
+          loading="lazy"
+          decoding="async"
           className="w-full h-auto block"
         />
       </div>

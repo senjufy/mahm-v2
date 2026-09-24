@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { openDonateModal } from "@/components/DonateModal";
 
@@ -47,12 +46,14 @@ export default function Header() {
             aria-label="MAHM Home"
           >
             <div className="relative h-16 sm:h-[68px] w-auto flex items-center justify-center">
-              <Image
+              <img
                 src="/logo_new.png"
                 alt="MAHM Logo"
                 width={63}
                 height={63}
-                priority
+                loading="eager"
+                decoding="sync"
+                fetchPriority="high"
                 className="object-contain h-16 sm:h-[65px] w-auto drop-shadow-xs"
               />
             </div>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
 
 export default function TeamModal({ member, onClose }) {
   // Handle escape key and body scroll lock
@@ -69,12 +68,12 @@ export default function TeamModal({ member, onClose }) {
           {/* Member Photo Thumbnail */}
           <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl overflow-hidden shrink-0 bg-gradient-to-b from-[#f0f4ea] via-[#e5ecdb] to-[#d8e5cb] border-2 border-white ring-1 ring-[#3f5a30]/15 shadow-xs flex items-center justify-center">
             {member.image ? (
-              <Image
+              <img
                 src={member.image}
                 alt={member.name}
-                fill
-                sizes="(max-width: 640px) 80px, 112px"
-                className="object-cover object-center"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover object-center"
                 style={{ objectPosition: member.objectPosition || "center" }}
               />
             ) : (

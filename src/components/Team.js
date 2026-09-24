@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import TeamModal from "@/components/TeamModal";
 
 /**
@@ -163,12 +162,12 @@ function TeamMemberCard({ member, onSelect }) {
       {/* 4:5 Boxed Portrait Container with orange top line */}
       <div className="relative w-full aspect-[4/5] rounded-2xl sm:rounded-[22px] bg-gradient-to-b from-[#f0f4ea] via-[#e5ecdb] to-[#d8e5cb] border border-[#3f5a30]/10 border-t-5 border-t-[#e08a1e] shadow-[0_8px_20px_-4px_rgba(63,90,48,0.12)] overflow-hidden transition-all duration-300 group-hover:-translate-y-1.5 group-hover:shadow-[0_16px_32px_-6px_rgba(63,90,48,0.18)] flex items-center justify-center">
         {member.image ? (
-          <Image
+          <img
             src={member.image}
             alt={member.name}
-            fill
-            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
             style={{ objectPosition: member.objectPosition || "center" }}
           />
         ) : (
@@ -230,14 +229,14 @@ export default function Team() {
       <div className="relative w-full overflow-hidden">
         {/* Full-width illustration */}
         <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-          <Image
+          <img
             src="/Teams/teams.jpg"
             alt="Hand-drawn illustration of teachers, students, engineers, and community workers"
             width={2048}
             height={768}
-            sizes="100vw"
+            loading="lazy"
+            decoding="async"
             className="w-full h-auto block"
-            priority
           />
         </div>
 

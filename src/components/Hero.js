@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 const HERO_IMAGES = [
   {
@@ -56,13 +55,13 @@ export default function Hero() {
             }`}
             aria-hidden={!isActive}
           >
-            <Image
+            <img
               src={image.src}
               alt={image.alt}
-              fill
-              priority={index === 0}
-              sizes="100vw"
-              className="object-cover object-center"
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding={index === 0 ? "sync" : "async"}
+              fetchPriority={index === 0 ? "high" : "low"}
+              className="w-full h-full object-cover object-center"
             />
           </div>
         );
