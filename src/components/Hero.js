@@ -31,10 +31,29 @@ const HERO_IMAGES = [
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loadedIndices, setLoadedIndices] = useState(() => new Set([0]));
 
   useEffect(() => {
+    // Preload next slide in background after initial mount
+    setLoadedIndices((current) => {
+      const updated = new Set(current);
+      updated.add(1);
+      return updated;
+    });
+
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % HERO_IMAGES.length);
+      setCurrentIndex((prev) => {
+        const next = (prev + 1) % HERO_IMAGES.length;
+        const upcoming = (next + 1) % HERO_IMAGES.length;
+        setLoadedIndices((current) => {
+          if (current.has(next) && current.has(upcoming)) return current;
+          const updated = new Set(current);
+          updated.add(next);
+          updated.add(upcoming);
+          return updated;
+        });
+        return next;
+      });
     }, 2500);
 
     return () => clearInterval(interval);
@@ -47,6 +66,7 @@ export default function Hero() {
     >
       {HERO_IMAGES.map((image, index) => {
         const isActive = index === currentIndex;
+        const shouldLoad = loadedIndices.has(index);
         return (
           <div
             key={image.src}
@@ -55,14 +75,16 @@ export default function Hero() {
             }`}
             aria-hidden={!isActive}
           >
-            <img
-              src={image.src}
-              alt={image.alt}
-              loading={index === 0 ? "eager" : "lazy"}
-              decoding={index === 0 ? "sync" : "async"}
-              fetchPriority={index === 0 ? "high" : "low"}
-              className="w-full h-full object-cover object-center"
-            />
+            {shouldLoad ? (
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding={index === 0 ? "sync" : "async"}
+                fetchPriority={index === 0 ? "high" : "low"}
+                className="w-full h-full object-cover object-center"
+              />
+            ) : null}
           </div>
         );
       })}
